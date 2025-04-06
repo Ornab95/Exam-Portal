@@ -107,8 +107,10 @@ DELETE http://localhost:8080/question/deleteQuestion/{id}
 ## 🧩Create Quiz
 POST "http://localhost:8080/quiz/create?subject=java&namQ=5&title=JavaQuiz"
 
-### 📥Get Quiz Questions
-GET http://localhost:8080/quiz/getQuiz/{id}
+### 📥 Get Quiz Questions
+**GET** `http://localhost:8080/quiz/getQuiz/{id}`
+
+```json
 [
   {
     "id": 1,
@@ -121,6 +123,7 @@ GET http://localhost:8080/quiz/getQuiz/{id}
     "subject": "Geography"
   }
 ]
+
 ### ✅Submit Quiz
 POST http://localhost:8080/quiz/submit/{id}
 [
