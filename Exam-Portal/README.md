@@ -25,21 +25,7 @@ This is a Spring Boot-based Quiz Application that provides REST APIs for managin
 
 ## 📁 Project Structure
 
-com.exam
-├── controller
-│   ├── QuizController.java
-│   └── QuestionController.java
-├── model
-│   ├── Question.java
-│   ├── Quiz.java
-│   ├── QuestionWrapper.java
-│   └── Responses.java
-├── repository
-│   ├── QuestionRepository.java
-│   └── QuizRepository.java
-├── service
-│   ├── QuestionService.java
-│   └── QuizService.java
+com.exam ├── controller │ ├── QuizController.java │ └── QuestionController.java ├── model │ ├── Question.java │ ├── Quiz.java │ ├── QuestionWrapper.java │ └── Responses.java ├── repository │ ├── QuestionRepository.java │ └── QuizRepository.java ├── service │ ├── QuestionService.java │ └── QuizService.java
 
 ## API Endpoints
 
