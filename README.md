@@ -1,5 +1,8 @@
 # 🎓 Quiz Application - Spring Boot REST API
-
+🧑‍💻 Developer
+**Ornab Biswass**  
+📧 [ornabbiswass@gmail.com](mailto:ornabbiswass@gmail.com)  
+🌐 [GitHub – Ornab95](https://github.com/Ornab95)
 
 ## Overview
 This is a Spring Boot-based Quiz Application that provides REST APIs for managing questions, creating quizzes, and evaluating responses.
@@ -23,10 +26,6 @@ This is a Spring Boot-based Quiz Application that provides REST APIs for managin
 - 📦 **Maven**
 - 📜 **Swagger** (Springdoc OpenAPI)
 
-## 📁 Project Structure
-
-com.exam ├── controller │ ├── QuizController.java │ └── QuestionController.java ├── model │ ├── Question.java │ ├── Quiz.java │ ├── QuestionWrapper.java │ └── Responses.java ├── repository │ ├── QuestionRepository.java │ └── QuizRepository.java ├── service │ ├── QuestionService.java │ └── QuizService.java
-
 ## API Endpoints
 
 ### Question Management
@@ -44,9 +43,29 @@ com.exam ├── controller │ ├── QuizController.java │ └── Qu
 | `/quiz/getQuiz/{id}` | GET | Get quiz questions |
 | `/quiz/submit/{id}` | POST | Submit quiz answers |
 
-### 📌Sample Usage
+### 📁 Project Structure
 
-## ➕Add Question
+```plaintext
+com.exam
+├── controller
+│   ├── QuizController.java
+│   └── QuestionController.java
+├── model
+│   ├── Question.java
+│   ├── Quiz.java
+│   ├── QuestionWrapper.java
+│   └── Responses.java
+├── repository
+│   ├── QuestionRepository.java
+│   └── QuizRepository.java
+├── service
+│   ├── QuestionService.java
+│   └── QuizService.java
+
+
+📌Sample Usage
+
+➕Add Question
 http://localhost:8080/question/addQuestion
 
 curl -X POST -H "Content-Type: application/json" -d '{
@@ -61,7 +80,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 }' 
 Response is 201 Created and Question added successfully
 
-### 📋Get All Questions
+📋Get All Questions
 GET http://localhost:8080/question/allQuestion
 [
   {
@@ -71,11 +90,11 @@ GET http://localhost:8080/question/allQuestion
     "option3": "Island",
     "option4": "Car",
     "answer": "Programming Language",
-    "dificulty": "Easy",
+    "difficulty": "Easy",
     "subject": "java"
   }
 ]
-### 📂Get Questions By Subject
+📂Get Questions By Subject
 GET http://localhost:8080/question/subject/{subject}
 [
   {
@@ -86,7 +105,7 @@ GET http://localhost:8080/question/subject/{subject}
     "option3": "Paris",
     "option4": "Rome",
     "answer": "Paris",
-    "dificulty": "Easy",
+    "difficulty": "Easy",
     "subject": "Geography"
   },
   {
@@ -97,17 +116,17 @@ GET http://localhost:8080/question/subject/{subject}
     "option3": "Tree",
     "option4": "Graph",
     "answer": "Queue",
-    "dificulty": "Medium",
+    "difficulty": "Medium",
     "subject": "Data Structure"
   }
 ]
-### ❌Delete Question
+❌Delete Question
 DELETE http://localhost:8080/question/deleteQuestion/{id}
 
-## 🧩Create Quiz
+🧩Create Quiz
 POST "http://localhost:8080/quiz/create?subject=java&namQ=5&title=JavaQuiz"
 
-### 📥 Get Quiz Questions
+📥 Get Quiz Questions
 **GET** `http://localhost:8080/quiz/getQuiz/{id}`
 
 ```json
@@ -119,12 +138,12 @@ POST "http://localhost:8080/quiz/create?subject=java&namQ=5&title=JavaQuiz"
     "option2": "Madrid",
     "option3": "Paris",
     "option4": "Rome",
-    "dificulty": "Easy",
+    "difficulty": "Easy",
     "subject": "Geography"
   }
 ]
 
-### ✅Submit Quiz
+✅Submit Quiz
 POST http://localhost:8080/quiz/submit/{id}
 [
   {
@@ -133,8 +152,4 @@ POST http://localhost:8080/quiz/submit/{id}
   }
 ]
 Swagger API http://localhost:8080/swagger-ui/index.html
-## 🧑‍💻 Developer
 
-**Ornab Biswass**  
-📧 [ornabbiswass@gmail.com](mailto:ornabbiswass@gmail.com)  
-🌐 [GitHub – Ornab95](https://github.com/Ornab95)
